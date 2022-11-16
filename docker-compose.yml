@@ -1,0 +1,25 @@
+version: "3.8"
+
+volumes:
+  drupal_db:
+services:
+  nginx:
+    image: rig/nginx:1.23.2
+    ports:
+      - "$NGINX_PORT:8080"
+    volumes:
+      - ./:/app-mount
+    depends_on:
+      - php
+      - mysql
+  php:
+    image: rig/php:8.1.12
+    volumes:
+      - ./:/app-mount
+  mysql:
+    image: mariadb:10.9.4
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=drupal
+    volumes:
+      - drupal_db:/var/lib/mysql

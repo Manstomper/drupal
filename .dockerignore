@@ -1,0 +1,9 @@
+node_modules
+/*.sql
+/*.sh
+/dev/*.sh
+.env
+.env.local
+.gitkeep
+.dockerignore
+README.md

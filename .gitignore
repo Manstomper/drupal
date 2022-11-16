@@ -1,0 +1,15 @@
+# Files with secrets and/or data
+.env
+/*.sql
+
+# Junk files
+desktop.ini
+.DS_Store
+.netbeans.xml
+
+# Built files
+node_modules
+public/vendor
+.gitattributes
+.editorconfig
+public/*
