@@ -4,11 +4,12 @@ volumes:
   drupal_db:
 services:
   nginx:
-    image: rig/nginx:1.23.2
+    image: nginx:1.23.2
     ports:
       - "$NGINX_PORT:8080"
     volumes:
       - ./:/app-mount
+      - ./dev/nginx/site.conf:/etc/nginx/conf.d/site.conf
     depends_on:
       - php
       - mysql

@@ -19,9 +19,6 @@ RUN apk update \
 # Composer. Update version when appropriate.
 COPY --from=composer:2.4.4 /usr/bin/composer /usr/local/bin/composer
 
-# Add symbolic link to drush
-RUN ln -s /app-mount/public/vendor/bin/drush /bin/drush
-
 # Config
 ADD ./dev/php/fpm.conf /usr/local/etc/php-fpm.d/zz-site.conf
 ADD ./dev/php/php.ini /usr/local/etc/php/conf.d/site.ini
