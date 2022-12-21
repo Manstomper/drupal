@@ -1,7 +1,7 @@
 node_modules
 /*.sql
 /*.sh
-/dev/*.sh
+/.local/*.sh
 .env
 .env.local
 .gitkeep

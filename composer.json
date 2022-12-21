@@ -3,7 +3,7 @@
   "description": "A demo Drupal 9 project",
   "type": "project",
   "version": "1.0.0",
-  "license": "Public domain",
+  "license": "CC-PDDC",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "repositories": [
@@ -17,12 +17,12 @@
     "composer/installers": "^1.9",
     "drupal/core-composer-scaffold": "^9.4",
     "drupal/recommended-project": "^9.4.8",
-    "drupal/devel": "^5",
-    "drush/drush": "^11.3.2"
+    "drush/drush": "^11.3.2",
+    "drupal/devel": "^5"
   },
   "require-dev": {},
   "config": {
-    "vendor-dir": "public/vendor",
+    "vendor-dir": "vendor",
     "allow-plugins": {
       "composer/installers": true,
       "drupal/core-project-message": true,
@@ -32,7 +32,10 @@
   "extra": {
     "drupal-scaffold": {
       "locations": {
-        "web-root": "public/"
+        "web-root": "public"
+      },
+      "file-mapping": {
+        "[web-root]/sites/development.services.yml": false
       }
     },
     "installer-paths": {
