@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cp -n ./.env.local ./.env
+cp -n ./.local/.env.local ./.env
 
 docker build . -f "$(pwd)/.local/php/Dockerfile" -t drupal/php:8.1.12 \
     && docker compose up -d \
