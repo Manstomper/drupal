@@ -9,3 +9,5 @@ else
 
     docker compose restart
 fi
+
+source .env && echo "The site should work from http://localhost:$NGINX_PORT"
