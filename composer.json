@@ -27,7 +27,8 @@
       "composer/installers": true,
       "drupal/core-project-message": true,
       "drupal/core-composer-scaffold": true
-    }
+    },
+    "process-timeout": 600
   },
   "extra": {
     "drupal-scaffold": {
@@ -58,5 +59,18 @@
         "type:drupal-drush"
       ]
     }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "ln -sfn /app-mount/vendor/bin/drush /bin/drush",
+      "rm ./.editorconfig",
+      "rm ./public/.csslintrc",
+      "rm ./public/.eslintignore",
+      "rm ./public/.eslintrc.json",
+      "rm ./public/.ht.router.php",
+      "rm ./public/.htaccess",
+      "rm ./public/example.gitignore",
+      "rm ./public/INSTALL.txt"
+    ]
   }
 }
