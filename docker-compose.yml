@@ -3,10 +3,10 @@ version: "3.8"
 volumes:
   db:
 services:
-  nginx:
+  web:
     image: nginx:1.23.2
     ports:
-      - "$NGINX_PORT:8080"
+      - "$WEB_SERVER_PORT:8080"
     volumes:
       - ./:/app-mount
       - ./.local/nginx/site.conf:/etc/nginx/conf.d/site.conf
@@ -31,4 +31,4 @@ services:
       - xpack.security.enabled=false
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     ports:
-      - "9200:9200"
+      - "$ELASTICSEARCH_PORT:9200"

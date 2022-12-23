@@ -18,6 +18,8 @@
     "drupal/core-composer-scaffold": "^9.4",
     "drupal/recommended-project": "^9.4.8",
     "drush/drush": "^11.3.2",
+    "drupal/search_api": "^1.28",
+    "drupal/elasticsearch_connector": "^7",
     "drupal/devel": "^5"
   },
   "require-dev": {},
@@ -61,8 +63,7 @@
     }
   },
   "scripts": {
-    "post-install-cmd": [
-      "ln -sfn /app-mount/vendor/bin/drush /bin/drush",
+    "cleanup": [
       "rm ./.editorconfig",
       "rm ./public/.csslintrc",
       "rm ./public/.eslintignore",
@@ -71,6 +72,13 @@
       "rm ./public/.htaccess",
       "rm ./public/example.gitignore",
       "rm ./public/INSTALL.txt"
+    ],
+    "post-install-cmd": [
+      "ln -sfn /app-mount/vendor/bin/drush /bin/drush",
+      "@cleanup"
+    ],
+    "post-update-cmd": [
+      "@cleanup"
     ]
   }
 }
