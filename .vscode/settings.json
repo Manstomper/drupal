@@ -1,0 +1,12 @@
+{
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "*.inc": "php",
+    "*.module": "php",
+    "*.install": "php",
+    "*.theme": "php",
+    "*.profile": "php",
+    "*.test": "php",
+    "*.info": "ini"
+  },
+}
