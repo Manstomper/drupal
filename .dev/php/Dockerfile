@@ -20,5 +20,5 @@ RUN apk update \
 COPY --from=composer:2.4.4 /usr/bin/composer /usr/local/bin/composer
 
 # Config
-ADD ./.local/php/fpm.conf /usr/local/etc/php-fpm.d/zz-site.conf
-ADD ./.local/php/php.ini /usr/local/etc/php/conf.d/site.ini
+ADD ./.dev/php/fpm.conf /usr/local/etc/php-fpm.d/zz-site.conf
+ADD ./.dev/php/php.ini /usr/local/etc/php/conf.d/site.ini
