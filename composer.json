@@ -19,10 +19,12 @@
     "drupal/recommended-project": "^9.4.8",
     "drush/drush": "^11.3.2",
     "drupal/search_api": "^1.28",
-    "drupal/elasticsearch_connector": "^7",
-    "drupal/devel": "^5"
+    "drupal/elasticsearch_connector": "^7"
   },
-  "require-dev": {},
+  "require-dev": {
+    "drupal/devel": "^5",
+    "drupal/webprofiler": "^9"
+  },
   "config": {
     "vendor-dir": "vendor",
     "allow-plugins": {

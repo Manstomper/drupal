@@ -11,4 +11,5 @@ printf 'if (file_exists(\"{$app_root}/{$site_path}/settings.local.php\")) { incl
 cp -n ./.dev/drupal/development.services.yml ./public/sites/
 
 echo "\$settings['cache']['bins']['render']='cache.backend.null';\$settings['cache']['bins']['discovery_migration']='cache.backend.memory';\$settings['cache']['bins']['dynamic_page_cache']='cache.backend.null';" >> ./public/sites/example.settings.local.php
+
 cp -n ./public/sites/example.settings.local.php ./public/sites/default/settings.local.php
